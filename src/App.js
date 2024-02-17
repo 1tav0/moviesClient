@@ -3,15 +3,16 @@ import api from "./api/axiosConfig";
 import { useState, useEffect } from 'react';
 import Layout from './components/Layout';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
 
 function App() {
   const [movies, setMovies] = useState();
-
+  console.log(movies);
   // function call to api
   const getMovies = async () => {
     try {
       const response = await api.get("/api/v1/movies");
-      console.log(response);
+      // console.log(response);
       setMovies(response.data)
     } catch (error) {
       console.log(error);
@@ -27,7 +28,9 @@ function App() {
     <div className="app">
       <Router>
         <Routes>
-          <Route path="/" element={<Layout />} />
+          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Home movies={movies} />} />
+          </Route>
         </Routes>
       </Router>
     </div>

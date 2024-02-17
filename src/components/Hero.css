@@ -1,0 +1,50 @@
+
+.movie__carousel__container{
+  /* background-color: orange; */
+  width: 100vw;
+  /* height: 100vh; */
+}
+.movie__card__container{
+  background-color: black;
+  height: 550px;
+  width: 100vw;
+}
+
+.movie__card{
+  /* background-color: green; */
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), var(--img);
+}
+
+.movie__detail{
+  /* background-color: blue; */
+  width: 100%;
+  position: absolute;
+  top: 200px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.movie__poster{
+  /* background-color: purple; */
+  height: 300px;
+  border: 1px solid gold;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.movie__poster > img{
+  height: 100%;
+  /* width: 100%; */
+  object-fit: contain;
+}
+
+.movie__title{
+  /* background-color: orange; */
+  color: white;
+  display: flex;
+  align-items: center;
+}
