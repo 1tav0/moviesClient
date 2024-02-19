@@ -9,21 +9,21 @@ const Hero = ({ movies }) => {
     <div className='movie__carousel__container'>
       <Carousel>
         {
-          movies.map((movie) => {
+          movies?.map((movie) => {
             return (
-              <Paper>
+              <Paper key={movie?.imdbId}>
                 <div className="movie__card__container">
                   <div className="movie__card"
                     style={{
-                      "--img": `url(${movie.backdrops[0]})`
+                      "--img": `url(${movie?.backdrops[0]})`
                     }}
                   >
                     <div className="movie__detail">
                       <div className="movie__poster">
-                        <img src={movie.poster} atl="" />
+                        <img src={movie?.poster} atl="" />
                       </div>
                       <div className="movie__title">
-                        <h4>{movie.title}</h4>
+                        <h4>{movie?.title}</h4>
                       </div>
                     </div>
                   </div>
